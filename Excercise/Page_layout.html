@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic HTML</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <style>
+    
+    body {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: "Mitr", serif;
+      font-weight: 2000;
+      font-style: normal;
+      background: linear-gradient(135deg, #ff9a9e, #ffd4c8 50%, #fbc2eb);
+      color: #333;
+      }
+      
+      h1, h2, h3 {
+      text-align: center;
+      }
+      
+      h1 {
+      font-size: 3em;
+      margin-top: 20px;
+      color: #1b1bbe;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      
+      h2 {
+      color: white;
+      background-color: rgba(58, 123, 213, 0.8);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 50px;
+      margin: 10px;
+      font-weight: 500;
+      box-shadow: 0 4px 8px rgb(74, 74, 74);
+  }
+      
+      h3 {
+      color: rgb(0, 123, 255);
+      }
+      
+      ul, ol {
+      list-style-type: none;
+      padding: 0;
+      }
+      
+      a {
+    color: #428fe6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+      }
+      
+      img {
+      display: block;
+      margin: 20px auto;
+      height: auto;
+      border-radius: 8px;
+      border: 5px solid rgba(255, 138, 128, 0.8); /* สีชมพูโปร่งแสง */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      
+      table {
+      width: 50%;
+      margin: 20px auto;
+      text-align: center;
+      }
+
+      .click {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #ff6b6b, #f94d6a); /* พื้นหลังไล่สีแดง */
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+}
+
+    </style>
+  <body>
+      
+    <h1 id="top">หมูทอดกระเทียม</h1>
+    <p class="click">คลิกเลือกเพื่อข้ามไปยังจุดที่ต้องการ </p>
+    <ul>
+      <li><a href="#วัตถุดิบ">วัตถุดิบ</a></li>
+      <li><a href="#วิธีทำ">วิธีทำ</a></li>
+      <li><a href="#โภชนาการ">โภชนาการ</a></li>
+    </ul>
+    <img src="../images/Muton.png" alt="หมูทอด" width="300px" />
+
+    <!-- วัตถุดิบ -->
+    <h2 id="วัตถุดิบ">วัตถุดิบ</h2>
+    <ol>
+      <li>สันคอหมูติดมัน 500 กรัม</li>
+      <li>แป้งทอดกรอบวังทิพย์ 100 กรัม</li>
+      <li>ผงปรุงรสหมู 8 กรัม</li>
+      <li>พริกไทยขาวป่น 8 กรัม</li>
+      <li>กระเทียมไทย 80 กรัม</li>
+      <li>ผงชูรส 5 กรัม</li>
+      <li>น้ำตาลปี๊บ 10 กรัม</li>
+      <li>น้ำตาลทราย 10 กรัม</li>
+      <li>ซีอิ๊วขาว 3 กรัม</li>
+      <li>น้ำปลา 3 กรัม</li>
+      <li>น้ำมันหอย 5 กรัม</li>
+      <li>นมสด 80 กรัม</li>
+      <li>น้ำมันปาล์ม 1000 กรัม</li>
+    </ol>
+
+    <!-- วิธีทำ -->
+    <h2 id="วิธีทำ">วิธีทำ</h2>
+    <h3>STEP 1 : หั่นหมู + หมักหมู</h3>
+    <ul>
+      <li><span>นำหมูมาหั่นเป็นเส้น ๆ </span>ความหนาประมาณ 1 เซนติเมตร เตรียมไว้</li>
+      <li>นำหมูหมักกับส่วนผสม เช่น พริกไทยขาวป่น ผงปรุงรสหมู</li>
+    </ul>
+
+    <h3>STEP 2 : ทอดกระเทียมเจียว</h3>
+    <ul>
+      <li>นำกระเทียมไปตำให้พอแตก ตักใส่ชามผสม เตรียมไว้</li>
+      <li>
+        จากนั้น ใส่แป้งทอดกรอบ น้ำเย็นจัด พริกไทยขาวป่น ผงปรุงรส
+        และเกลือลงไปคลุกให้เข้ากัน
+      </li>
+      <li>
+        เตรียมกระทะ ใส่น้ำมัน รอให้ร้อน ใส่กระเทียมลงไป แล้วค่อยหรี่ไฟ หมั่นคน
+        จนสุกสีกระเทียมเหลืองทอง ตักขึ้นพักให้สะเด็ดน้ำมัน
+      </li>
+    </ul>
+
+    <h2 id="โภชนาการ">โภชนาการ</h2>
+    <!-- Table Element -->
+    <table border="2">
+      <tr>
+        <td>สารอาหาร</td>
+        <td>ปริมาณ</td>
+        <td>หน่วย</td>
+      </tr>
+      <tr>
+        <td>โปรตีน</td>
+        <td>300</td>
+        <td rowspan="2" style="padding: 5%">cal</td>
+      </tr>
+      <tr>
+        <td>ไขมัน</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td colspan="3">รวม</td>
+      </tr>
+      <tr>
+        <td rowspan="2">หมายเหตุ</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <!-- ไอเว่นเป็นเกย์ -->
+
+
+    
+  </p>
+  <a href="#top">TOP</a>
+  
+    <p>
+      <source />
+      :
+      <a
+        href="https://www.sgethai.com/article/fried-pork-with-garlic/"
+        target="_blank"
+        >ข้อมูลนี้นำมาจาก คลิก//</a
+      >
+    </p>
+
+    <form action="https://www.example.com/" method="get">
+      <label for="comments">Comments</label>
+      <br>
+      <textarea name="50" id="10"></textarea>
+      <br>
+      <input type="submit" value="submit">
+      <input type="reset" value="reset">
+
+    </form>
+  </body>
+</html>

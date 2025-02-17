@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Shogun</title>
+    <style>
+      body {
+        background: linear-gradient(to bottom, #a8e063, #56ab2f);
+        background-attachment: fixed;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Navbar */
+      .navbar {
+        background-color: #10451d;
+        padding: 25px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .navbar img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+      }
+
+      .navbar ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar ul li {
+        margin: 0 25px;
+      }
+
+      .navbar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .navbar ul li a:hover {
+        color: #a8e063;
+      }
+
+      /* Container */
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+        flex-grow: 1;
+      }
+
+      /* Image Slider */
+      .slider-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .picture-title {
+        text-align: center;
+        font-size: 26px;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        margin-bottom: 15px;
+      }
+
+      .slider {
+        position: relative;
+        width: 450px;
+        overflow: hidden;
+      }
+
+      .slider img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transition: opacity 0.6s ease-in-out;
+      }
+
+      .slider img.show {
+        opacity: 1;
+      }
+
+      .slider button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 15px;
+        cursor: pointer;
+        font-size: 20px;
+        transition: 0.3s;
+      }
+
+      .slider button:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+
+      .slider .prev {
+        left: 0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+
+      .slider .next {
+        right: 0;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      .text-content {
+        width: 50%;
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+      }
+
+      .text-content h1 {
+        font-size: 25px;
+        font-weight: bold;
+      }
+
+      .text-content p {
+        font-size: 20px;
+        margin: 15px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <img src="images/Pic1.png" alt="Logo" />
+      <ul>
+        <li><a href="indexx.html">Home</a></li>
+        <li><a href="MyWork.html">My Work</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <!-- Image Slider -->
+      <div class="slider-container">
+        <div class="picture-title">My Picture</div>
+        <div class="slider">
+          <img id="slider-image" class="show" src="images/Shogun1.JPG" />
+          <button class="prev" onclick="prevImage()">◀</button>
+          <button class="next" onclick="nextImage()">▶</button>
+        </div>
+      </div>
+
+      <div class="text-content">
+        <h1>สวัสดีครับ! ผมชื่อ นายปัณณธร ฉิมเรือง รหัสนักศึกษา 6640011033</h1>
+        <p>👋 <strong>เรียกผมว่า:</strong> โชกุน</p>
+        <p>💡 <strong>ผมเป็นคนที่ชอบ:</strong> เล่นบาสเกตบอล</p>
+        <p>🚀 <strong>เวลาว่างผมมักจะ:</strong> ตัดต่อวิดีโอ</p>
+        <p>🎯 <strong>เป้าหมายของผมคือ:</strong> มีเงินเยอะๆ มีเงินเหลือใช้</p>
+      </div>
+    </div>
+
+    <script>
+      const images = [
+        "images/Shogun1.JPG",
+        "images/Shogun2.JPG",
+        "images/Shogun3.JPG",
+        "images/Shogun4.JPG",
+        "images/Shogun5.JPG",
+      ];
+      let currentIndex = 0;
+      let imgElement = document.getElementById("slider-image");
+
+      function updateImage() {
+        imgElement.classList.remove("show");
+        setTimeout(() => {
+          imgElement.src = images[currentIndex];
+          imgElement.classList.add("show");
+        }, 200);
+      }
+
+      function prevImage() {
+        currentIndex =
+          currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+        updateImage();
+      }
+
+      function nextImage() {
+        currentIndex =
+          currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+        updateImage();
+      }
+    </script>
+  </body>
+</html>

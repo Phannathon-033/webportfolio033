@@ -1,0 +1,28 @@
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+#picture {
+  width: 100px;
+}
+#head {
+  color: #333;
+  background-color: #fff;
+  border: 3px solid #007bff;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 20px auto;
+  border-radius: 15px;
+}
+#name,#ID {
+  margin: 0;
+}
+h1 {
+  color: white;
+  background-color: blue;
+}
+h2 {
+  color: white;
+  background-color: blue;
+}
